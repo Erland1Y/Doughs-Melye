@@ -1,0 +1,135 @@
+body {
+  background-color: #c7a8806e;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 40px 20px;
+  color: #332a20;
+}
+
+.titulo {
+  text-align: center;
+  color: #4a3b2c;
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin: 0 0 30px;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.container aside {
+  position: sticky;
+  top: 20px;
+  flex-shrink: 0;
+}
+
+.container aside img {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #e7a248;
+  display: block;
+}
+
+.resena {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+}
+
+.resena th,
+.resena td {
+  border: 1px solid #4a3b2c;
+  vertical-align: middle;
+}
+
+.resena thead th {
+  background-color: #855104;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  padding: 18px 15px;
+}
+
+.resena tbody th {
+  background-color: #f4ece1;
+  color: #4a3b2c;
+  text-align: left;
+  width: 28%;
+  padding: 14px;
+  font-size: 14px;
+}
+
+.resena tbody td {
+  padding: 14px 16px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.botones-navegacion {
+  text-align: center;
+  margin: 35px 0 15px;
+}
+
+.botones-navegacion input[type="button"] {
+  background-color: #855104;
+  color: #ffffff;
+  border: 2px solid #e7a248;
+  padding: 12px 26px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.botones-navegacion input[type="button"]:hover {
+  background-color: #e7a248;
+  color: #332a20;
+}
+
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 20px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .container aside {
+    position: static;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .container aside img {
+    width: 260px;
+  }
+
+  .resena tbody th,
+  .resena tbody td {
+    font-size: 13px;
+    padding: 10px;
+  }
+
+  .resena tbody th {
+    width: 34%;
+  }
+
+  .resena tbody td {
+    text-align: left;
+  }
+}

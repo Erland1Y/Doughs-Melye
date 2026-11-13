@@ -1,0 +1,94 @@
+body {
+  background-color: #c7a8806e;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 40px 20px;
+  color: #332a20;
+}
+
+.foda-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.foda-encabezados {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.foda-encabezados h2 {
+  font-size: 16px;
+  text-decoration: underline;
+  letter-spacing: 1px;
+}
+
+.foda-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+}
+
+.cuadrante {
+  position: relative;
+  padding: 20px 25px 45px 35px;
+}
+
+.borde-der {
+  border-right: 1px solid #000000;
+}
+
+.borde-inf {
+  border-bottom: 1px solid #000000;
+}
+
+.cuadrante h3 {
+  text-align: center;
+  font-style: italic;
+  font-size: 16px;
+  margin-bottom: 18px;
+}
+
+.cuadrante ul {
+  list-style: none;
+}
+
+.cuadrante li {
+  position: relative;
+  font-size: 14px;
+  line-height: 1.45;
+  margin-bottom: 10px;
+}
+
+.cuadrante li::before {
+  content: "❖";
+  position: absolute;
+  left: -22px;
+  font-size: 13px;
+}
+
+.icono {
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+  font-size: 22px;
+  filter: grayscale(100%) contrast(150%);
+}
+
+@media (max-width: 768px) {
+  .foda-encabezados {
+    display: none;
+  }
+
+  .foda-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .borde-der {
+    border-right: none;
+    border-bottom: 1px solid #000000;
+  }
+}

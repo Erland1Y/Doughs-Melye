@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doughs Melye</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <h2 id="Productos">Manjares destacados</h2>
+    <main class="recetas">
+        <div class="card-info">
+            <img src="img/banner1.jpg" alt="Orange">
+            <p>QUEQUE DE NARANJA</p>
+            <button type="button" class="btn-carrito" onclick="agregarAlCarrito('Queque de Naranja', 6.00)">🛒 Añadir (6.00 Bs.)</button>
+        </div>
+        <div class="card">
+            <img src="img/banner2.jpg" alt="Torta">
+            <p>TORTA DE TRES LECHES</p>
+            <button type="button" class="btn-carrito" onclick="agregarAlCarrito('Torta de Tres Leches', 10.00)">🛒 Añadir (10.00 Bs.)</button>
+        </div>
+        <div class="card-info">
+            <img src="img/banner3.jpg" alt="Chispas">
+            <p>GALLETA DE CHOCOLATE</p>
+            <button type="button" class="btn-carrito" onclick="agregarAlCarrito('Galleta de Chocolate', 7.00)">🛒 Añadir (7.00 Bs.)</button>
+        </div>
+    </main>
+
+    <h2 id="Cotizacion">Nomenclatura</h2>
+    <p class="descripcion-texto">El emprendimiento se basa en estos 3 recetas, por lo que el sazon de desplegar sabores sera la misma cotizacion.</p>
+    <table>
+        <tr>
+            <th>Productos</th>
+            <th>Costo Unitario Bs.</th>
+        </tr>
+        <tr>
+            <td>Queques <br> Tortas <br> Galletas </td>
+            <td>6.00 <br> 10.00 <br> 7.00</td>
+        </tr>
+    </table>
+
+    <h2 id="Carrito">Carrito de Compras</h2>
+    <table id="tabla-carrito">
+        <thead>
+            <tr>
+                <th>Producto Seleccionado</th>
+                <th>Precio (Bs.)</th>
+            </tr>
+        </thead>
+        <tbody id="lista-carrito">
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>TOTAL A PAGAR</th>
+                <th id="total-carrito">0.00 Bs.</th>
+            </tr>
+        </tfoot>
+    </table>
+    <button type="button" class="btn-vaciar" onclick="vaciarCarrito()">Vaciar Carrito</button>
+
+    <script src="js/carrito.js"></script>
+</body>
+</html>

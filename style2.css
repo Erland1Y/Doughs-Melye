@@ -1,0 +1,103 @@
+body {
+    background-color: #c7a8806e;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+.Container-two {
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.info {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.2fr;
+    gap: 30px;
+    align-items: start;
+}
+.proceso {
+    grid-column: 1;
+    padding: 0;
+}
+.info aside {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 20px;
+}
+.idea {
+    grid-column: 3;
+    margin: 0;
+    padding: 0;
+}
+.info aside img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    object-fit: contain;
+}
+.info h2,
+.info h3 {
+    border-left: 4px solid #d97706;
+    padding-left: 12px;
+    color: #333;
+    margin: 0 0 12px 0;
+}
+.info h2 {
+    font-size: 24px;
+    letter-spacing: 0.3px;
+}
+.info h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 25px;
+    margin-left: 15px;
+}
+.info p {
+    color: #444;
+    line-height: 1.6;
+    margin: 0 0 15px 0;
+    font-size: 14.5px;
+    text-align: justify;
+}
+.idea ol {
+    padding-left: 35px;
+    margin-top: 15px;
+}
+.idea ol li {
+    margin-bottom: 12px;
+    color: #444;
+    font-size: 14.5px;
+    line-height: 1.5;
+}
+
+/* CELULAR - ESTO ES LO QUE TE FALTABA */
+@media (max-width: 768px) {
+  .Container-two {
+    padding: 16px;
+  }
+  .info {
+    grid-template-columns: 1fr; /* de 3 columnas a 1 */
+    gap: 20px;
+  }
+  .proceso, .info aside, .idea {
+    grid-column: 1; /* todos ocupan todo el ancho */
+  }
+  .info aside {
+    position: static; /* quita el sticky que en celular estorba */
+    order: -1; /* la imagen va primero */
+  }
+  .info aside img {
+    max-width: 280px;
+  }
+  .info p {
+    text-align: left; /* ya no más huecos gigantes */
+    font-size: 15px;
+  }
+  .info h3 {
+    margin-left: 0;
+  }
+}
